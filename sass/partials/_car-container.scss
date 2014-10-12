@@ -1,0 +1,77 @@
+.car-container {
+    @include animation(caranimation $caranimationduration infinite $defaultanimationdelay linear);
+    @include transform(translateY(-20px) rotate(-2deg));
+    overflow: hidden;
+    width: 175px;
+    height: 120px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    margin-left: -90px;
+    z-index: 3;
+    .door-handle {
+        @include background($carhandlecolor);
+        @include border-radius(3px);
+        @include transform(translateY(10px));
+        width: 15px;
+        height: 4px;
+        margin-left: 105px;
+    }
+    .roof-container {
+        @include perspective(70px);
+        position: relative;
+        width: 85px;
+        height: 50px;
+        left: 50%;
+        top: 2px;
+        margin-left: -40px;
+    }
+    .roof {
+        @include background($roofcolor url($roofimage)  15px 0px no-repeat);
+        @include border-radius(10px 10px 0 0);
+        @include transform(rotateX(25deg) translateY(-2px));
+        border: 10px solid $carcolor;
+        border-bottom-width: 1px;
+        width: 65px;
+        height: 40px;
+        z-index: 2;
+    }
+    .light {
+        @include border-radius(20px);     
+        width: 20px;
+        height: 20px;
+        top: 60px;
+        &.front-light {
+            @include transform(translateY(10px));   
+            @include background($carfrontlightcolor);
+            left:-10px;
+            margin-left: -10px;
+        }
+        &.rear-light {
+            @include transform(translateY(-10px));   
+            @include background($carrearlightcolor);
+            right:-10px;
+            margin-left: 165px;
+        }
+    }
+    .car-body {
+        @include box-sizing(border-box);
+        @include background($carcolor);
+        @include border-radius(10px);
+        width: 175px;
+        height: 55px;
+        z-index: 5;
+    }
+    .wheel {
+        @include box-shadow(0 0 0 10px $cartyrecolor inset);
+        @include background($carwheelcolor);
+        @include border-radius(50px);
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        bottom: 0px;
+        left: 20px;
+        &:first-child { left: 35px;  }
+        &:last-child  { left: 115px; }
+    }
+}

@@ -1,0 +1,11 @@
+.earth-container {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    img {
+        @include animation(earthrotateanimation $earthanimationduration linear $defaultanimationdelay infinite);   
+        margin: auto auto;
+        display: block;
+        z-index: 3;
+    }
+}

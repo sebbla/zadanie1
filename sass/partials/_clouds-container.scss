@@ -1,0 +1,19 @@
+.clouds-container {
+    .cloud {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;    
+        width: 100%;
+        z-index: 4;
+        &.cloud-main {
+            @include background(url($maincluoudsimage)  0 100% repeat-x);
+            @include animation(maincloudanimation $maincludsanimationduration linear $defaultanimationdelay infinite);   
+        }
+        &.cloud-back {
+            @include background(url($backcluoudsimage) 20px 100% repeat-x);
+            @include animation(cloudanimation $backcludsanimationduration linear $defaultanimationdelay infinite);   
+            @include opacity($backcloudopacity);
+        }
+    }
+}

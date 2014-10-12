@@ -1,0 +1,41 @@
+@include keyframes(earthrotateanimation) {
+    0%   { @include rotate(0deg); }
+    50%  { @include rotate(180deg); }
+    100% { @include rotate(360deg); }   
+}
+@include keyframes(lighthouserotateanimation) {
+    from { @include rotate(-31deg); }
+    to   { @include rotate(329deg); }   
+}
+@include keyframes(maincloudanimation) {
+    0    { background-position: 0 100%; }
+    100% { background-position: 1637px 100%; }   
+}
+@include keyframes(cloudanimation) {
+    0    { background-position: 100px 100%; }
+    100% { background-position: 1637px 100%; }   
+}
+@include keyframes(suninneranimation)     { to { transform: rotate(1turn); } }
+@include keyframes(suncontaineranimation) { to { transform: translateX(500px); } }
+@include keyframes(caranimation) {
+    6%   { @include transform(translateY(-5px) rotate(-2deg)); }
+    8%   { @include transform(translateY(0px) rotate(1deg)); }
+    10%  { @include rotate(0deg); }
+    20%  { @include rotate(0deg); }
+    22%  { @include transform(translateY(0px) rotate(1deg)); }
+    24%  { @include transform(translateY(-5px) rotate(5deg)); }
+    32%  { @include transform(translateY(-30px) rotate(0deg)); }
+    40%  { @include transform(translateY(-5px) rotate(-5deg)); }
+    42%  { @include transform(translateY(0px) rotate(-1deg)); }
+    44%  { @include rotate(0deg); }
+    62%  { @include rotate(0deg); }
+    64%  { @include transform(translateY(0px) rotate(1deg)); }
+    66%  { @include transform(translateY(-5px) rotate(5deg)); }
+    74%  { @include transform(translateY(-30px) rotate(0deg)); }
+    80%  { @include transform(translateY(-5px) rotate(-5deg)); }
+    82%  { @include transform(translateY(0px) rotate(-1deg)); }
+    84%  { @include rotate(0deg); }
+    86%  { @include transform(translateY(0px) rotate(1deg)); }
+    88%  { @include transform(translateY(-5px) rotate(5deg)); }
+    98%  { @include transform(translateY(-30px) rotate(0deg)); }    
+}

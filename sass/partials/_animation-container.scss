@@ -1,0 +1,7 @@
+.animation-container {
+    @include background-image(linear-gradient($blue, $lightblue));
+    margin: auto;
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+}

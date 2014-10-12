@@ -1,0 +1,55 @@
+/* Colors */
+$red: #db0000;
+$yellow: #ffd800;
+$brown: #800001;
+$lightblack: #010001;
+$gray: #d5d5d5;
+$lightgray: #f2f3dc;
+$darkgray: #979875;
+$blue: #319dcf;
+$lightblue: #3eb0e5;
+$lightenblue: #afd9ed;
+$darkblue: #216b8c;
+
+/* Animations */
+$defaultanimationdelay: 3s;
+$defaultanimationduration: 4s;
+
+/* Clouds */
+$maincludsanimationduration: 20s;
+$backcludsanimationduration: $maincludsanimationduration * 2;
+$maincluoudsimage: "../images/clouds1.png";
+$backcluoudsimage: "../images/clouds2.png";
+$backcloudopacity: 0.8;
+
+/* Earth */
+$earthanimationduration: $defaultanimationduration;
+$earthradius: 350px;
+
+/* Sun */
+$sunanimationduration: $defaultanimationduration * 2;
+$innersunanimationduration: $sunanimationduration * 2;
+$sunraycolor: $yellow;
+$innersuncolor: $yellow;
+
+/* Car */
+$caranimationduration: $defaultanimationduration;
+$roofimage: "../images/flash.png";
+$roofcolor: $lightenblue;
+$carcolor: $red;
+$carwheelcolor:  $gray;
+$cartyrecolor: $lightblack;
+$carhandlecolor: $lightblack;
+$carfrontlightcolor: $yellow;
+$carrearlightcolor: darken($carcolor,15%);
+
+/* Lighthouse */
+$lighthouseanimationduration: $defaultanimationduration;
+$lighthousewidth: 56px;
+$lighthouseheight: 175px;
+$lightgousetopwindowcolor: $darkblue;
+$lightgousetopwindowbordercolor: $lightblack;
+$lightgousewindowcolor: $darkblue;
+$lighthousetopcolor: $brown;
+$lighthousemiddlecolor: $brown;
+$lighthousebottomcolor: linear-gradient(to right, $lightgray, $darkgray);

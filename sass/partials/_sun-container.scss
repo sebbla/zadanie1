@@ -1,0 +1,30 @@
+.sun-container {    
+    @include animation(suncontaineranimation $sunanimationduration ease-in-out $defaultanimationdelay infinite alternate);
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    width: 1000px;
+    margin-left: -1000px;
+    .inner {
+        @include background($innersuncolor);
+        margin: auto auto;
+    }
+    .ray {
+        @include background($sunraycolor);
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        &:first-child  {  @include transform(skew(40deg, 40deg)); }
+        &:nth-child(2) { @include transform(rotate(45deg) skew(40deg, 40deg)); }
+        &:nth-child(3) { @include transform(rotate(90deg) skew(40deg, 40deg)); }
+        &:nth-child(4) { @include transform(rotate(135deg) skew(40deg, 40deg)); }
+    }
+}
+.sun-container > .inner {
+    @include animation(suninneranimation $innersunanimationduration linear $defaultanimationdelay infinite);
+    @include background($innersuncolor);
+    width: 120px; 
+    height: 120px;
+    border-radius: 100%; 
+    transform-origin: 250% center;
+}

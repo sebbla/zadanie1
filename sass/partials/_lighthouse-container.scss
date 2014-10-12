@@ -1,0 +1,79 @@
+.lighthouse-container {
+    @include animation(lighthouserotateanimation $lighthouseanimationduration linear $defaultanimationdelay infinite);
+    @include transform(rotate(-31deg));
+    @include transform-origin(50%, $earthradius +  $lighthouseheight);    
+    height: $lighthouseheight;
+    width: $lighthousewidth;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: - ( $lighthousewidth / 2 );
+    .window {
+        @include background($lightgousewindowcolor);
+        @include border-radius(25px 25px 0 0);
+        left: 50%;
+        position: absolute;
+        margin-left: -8px;
+        &.window-top { 
+            top: 15px; 
+            width: 16px;
+            height: 30px;
+        }
+        &.window-middle { 
+            top: 80px; 
+            width: 14px;
+            height: 23px;
+        }
+        &.window-bottom { 
+            top: 130px; 
+            width: 13px;
+            height: 18px;
+        }
+    }
+    .top-part {
+        width: 0;
+        height: 0;
+        border-left: 23px solid transparent;
+        border-right: 23px solid transparent;
+        border-bottom: 16px solid $lighthousetopcolor;
+        margin-left: 5px;
+    }
+    .middle-part {
+        @include background($lighthousemiddlecolor);
+        position: static;
+        border-top: 1px solid darken($lighthousemiddlecolor, 10%);
+        z-index: 2;
+        width: 36px;
+        height: 25px;
+        top: 16px;
+        left: 50%;
+        margin-left: -18px;
+        margin-left: 10px;
+        .middle-window {
+            @include background($lightgousetopwindowcolor);
+            position: absolute;
+            top: 20px;
+            border: 1px solid $lightgousetopwindowbordercolor;
+            width: 10px;
+            height: 10px;
+            left: 10px;
+            &:nth-child(2) { left: 22px; }
+            &:nth-child(3) { left: 34px; }
+        }
+    }
+    .bottom-part-container {
+        @include perspective(50px);
+        width: inherit;
+        height: 125px;
+        position: absolute;
+        top: 15px;
+    }
+    .bottom-part {
+        @include background-image($lighthousebottomcolor);
+        @include transform(rotateX(10deg));
+        @include transform-origin(50%, 100%);
+        bottom: 0;
+        width: inherit;
+        height: 165px;
+    }    
+}
